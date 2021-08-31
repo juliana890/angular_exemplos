@@ -1,4 +1,12 @@
 <!-- Esse é nosso componente principal, aqui chamamos os outros componentes -->
 <exp-header></exp-header>
 
-<exp-student></exp-student>
+<!-- Adicionando mais propriedades -->
+<!-- Fazemos o binding em isJedi pois ele é um atributo de retorno boolean e não string 
+<exp-student name="Luke" [isJedi]="true"></exp-student>
+<exp-student name="Han Solo" [isJedi]="false"></exp-student>
+<exp-student name="Leia" [isJedi]="false"></exp-student> -->
+
+<exp-student [student]="luke"></exp-student>
+<exp-student [student]="han"></exp-student>
+<exp-student [student]="leia"></exp-student>

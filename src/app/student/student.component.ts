@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Student } from './student.model';
 
 @Component({
   selector: 'exp-student',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
-  name: string = 'Luke';
-  isJedi: boolean = true;
+  //Input(): Habilitando as propriedades para receberen valores do component parent
+  //Tiramos os valores padrões e passamos no template
+  @Input() student: Student
 
   constructor() { }
 
