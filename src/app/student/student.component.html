@@ -1,5 +1,7 @@
-<div>
-  Student: {{student.name}}
+<!-- Se existir um estudante definido exibimos o conteúdo -->
+<div *ngIf="student">
+  <!-- Utilizamos '?': Caso o estudante não seja definido o angular não lê o nome do objeto -->
+  Student: {{student?.name}}
 
   <!-- Se ele não for um jedi eu escondo o conteúdo -->
   <!-- <div [hidden]="!student.isJedi">
@@ -7,8 +9,9 @@
   </div> -->
 
   <!-- Também podemos utilizar a diretiva *ngIf para esconder a informação no browser -->
-  <div *ngIf="student.isJedi">
-    Jedi Temple: {{student.temple}}
+  <div *ngIf="student?.isJedi">
+    Jedi Temple: {{student?.temple}}
   </div>
-
 </div>
+
+<p *ngIf="!student">Sem dados para exibir.</p>
