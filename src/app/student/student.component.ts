@@ -12,9 +12,12 @@ export class StudentComponent implements OnInit {
   //Tiramos os valores padrões e passamos no template
   @Input() student: Student
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  clicked(){
+    console.log(`Student: ${this.student.name}`);
   }
 
 }

@@ -1,7 +1,8 @@
 <!-- Se existir um estudante definido exibimos o conteúdo -->
 <div *ngIf="student">
   <!-- Utilizamos '?': Caso o estudante não seja definido o angular não lê o nome do objeto -->
-  Student: {{student?.name}}
+  <!-- Exemplo de evento com click criamos o método cliked para mostrar qual objeto teve seu nome clicado-->
+  Student: <a href="#" (click)="clicked()">{{student?.name}}</a>
 
   <!-- Se ele não for um jedi eu escondo o conteúdo -->
   <!-- <div [hidden]="!student.isJedi">
@@ -10,7 +11,10 @@
 
   <!-- Também podemos utilizar a diretiva *ngIf para esconder a informação no browser -->
   <div *ngIf="student?.isJedi">
-    Jedi Temple: {{student?.temple}}
+    <!-- Chamamos o focus para o campo de referência description -->
+    Jedi Temple: {{student?.temple}} <button (click)="description.focus()">Focus</button> <br/>
+    <!-- Para obter uma referência para essa textarea utilizamos # -->
+    <textarea #description></textarea>
   </div>
 </div>
 
