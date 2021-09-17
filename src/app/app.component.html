@@ -10,3 +10,8 @@
 <exp-student [student]="luke"></exp-student>
 <exp-student [student]="han"></exp-student>
 <exp-student [student]="leia"></exp-student>
+
+<!-- Utilizamos a diretiva *ngFor para iterar nosso array de students -->
+<!-- Damos um nome para a variável no caso let >> Passamos o nome do array no nosso arquivo .ts -->
+<!-- A cada iteração ele cria uma variável student onde vc pode ter uma referência para os items -->
+<exp-student *ngFor="let student of students" [student]="student"></exp-student>

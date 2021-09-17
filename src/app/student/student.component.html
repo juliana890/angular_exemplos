@@ -2,7 +2,12 @@
   Student: {{student.name}}
 
   <!-- Se ele não for um jedi eu escondo o conteúdo -->
-  <div [hidden]="!student.isJedi">
+  <!-- <div [hidden]="!student.isJedi">
+    Jedi Temple: {{student.temple}}
+  </div> -->
+
+  <!-- Também podemos utilizar a diretiva *ngIf para esconder a informação no browser -->
+  <div *ngIf="student.isJedi">
     Jedi Temple: {{student.temple}}
   </div>
 
